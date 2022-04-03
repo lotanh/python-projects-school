@@ -1,13 +1,14 @@
 import numpy as np
-
-suger_range = int(np.floor(np.random.random() * 10 + 1))
-
-arr = np.random.randint(0,suger_range, size=(16,21))
-
+#First part
+#1
+suger_range = np.random.randint(11)
+#2
+arr = np.random.randint(suger_range , size=(16,21))
+#3
 def get_suger_avg(array):
-    avg = np.average(array, axis=1)
-    return avg
-
-print(get_suger_avg(arr))
-
-
+    return np.round(np.average(array , axis=1), 3)
+#4
+get_suger_avg(arr)
+#5
+patients_avg_time = np.random.exponential(size=16)
+print(patients_avg_time)
